@@ -132,7 +132,7 @@ const Home = () => {
 
           <div
             ref={elementRef}
-            className="border rounded-lg border-teal-400 w-full max-w-md mt-4 pt-4 text-center shadow-lg shadow-teal-500/50"
+            className="border rounded-lg border-teal-400 w-full max-w-md mt-4 pt-4 text-center shadow-lg shadow-indigo-500/50"
           >
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 px-4 py-2 font-bold mb-3 text-3xl font-courier-prime animate-color-change">
               Seeking Internship Opportunities
