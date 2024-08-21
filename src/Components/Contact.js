@@ -1,11 +1,12 @@
-import React from 'react'
+// src/pages/Contact.js
+import React from 'react';
 
 const Contact = () => {
   return (
-    <div className='min-h-screen bg-gray-950  relative overflow-y-auto'>
-      Contact us
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold">Contact</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
