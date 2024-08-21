@@ -182,17 +182,17 @@ const Experience = () => {
                   alt={cert.name}
                   className="w-16 h-16 mx-auto mb-4"
                 />
-                <h3 className="text-xl font-courier-prime font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">
+                <h3 className="text-xl font-courier-prime font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500">
                   {cert.name}
                 </h3>
-                <p className="text-base font-courier-prime text-gray-300">
+                <p className="text-base font-courier-prime text-black">
                   {cert.Course}
                 </p>
                 <a
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-400 underline mt-2 inline-block"
+                  className="text-teal-400  mt-2 inline-block"
                 >
                   View Certificate
                 </a>
