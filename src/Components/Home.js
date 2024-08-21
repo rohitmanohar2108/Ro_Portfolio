@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import animationData from '../Animations/Animation.json';
 import { motion } from "framer-motion";
 import Lottie from 'lottie-react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Import React Icons
 
 const quotes = [
   {
@@ -61,7 +62,7 @@ const Home = () => {
   const words = ["I", "am", "Rohit,", "Computer", "Science", "Undergrad", "at", "NITK"];
 
   return (
-    <div className="min-h-screen bg-white flex flex-col px-8">
+    <div className="min-h-screen bg-black flex flex-col px-8">
       <div className="flex flex-row items-start justify-between flex-1">
         {/* Left Side: Text Content */}
         <div className="flex flex-col items-start ml-24 mt-32">
@@ -130,55 +131,35 @@ const Home = () => {
       </div>
 
       {/* Bottom: Quotes Section */}
-      <div className="mt-16 w-full flex flex-col items-center">
-        <motion.div
-          className="w-full max-w-2xl mx-auto px-4 py-8 bg-black bg-opacity-30 rounded-lg shadow-lg shadow-cyan-500/50 border-multicolor outline hover:outline-2 ring-2 relative"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-          <div className="flex items-center space-x-4 overflow-hidden">
-            <motion.img
-              src={quotes[currentQuoteIndex].image}
-              alt={quotes[currentQuoteIndex].author}
-              className="h-56 w-56 object-cover rounded-full"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            />
-            <motion.div
-              className="flex-1"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              <p className="text-3xl text-white font-dancing-script">
-                {quotes[currentQuoteIndex].text}
-              </p>
-              <p className="text-xl font-courier-prime mt-3 text-white">
-                - {quotes[currentQuoteIndex].author}
-              </p>
-            </motion.div>
+      <div className="mt-16  bg-teal-400  flex items-center">
+        <div className="w-full mx-auto relative">
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-4 ml-5 rounded-full cursor-pointer hover:bg-gray-800 z-10">
+            <FaArrowLeft onClick={handlePrevQuote} />
           </div>
-
-          {/* Navigation Buttons */}
-          <button
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800"
-            onClick={handlePrevQuote}
-          >
-            &#8249;
-          </button>
-          <button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800"
-            onClick={handleNextQuote}
-          >
-            &#8250;
-          </button>
-        </motion.div>
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-4 mr-5  rounded-full cursor-pointer hover:bg-gray-800 z-10">
+            <FaArrowRight onClick={handleNextQuote} />
+          </div>
+          <div className="w-full px-7 py-8 bg-black bg-opacity-30  shadow-lg shadow-cyan-500/50 border-multicolor outline hover:outline-2 ring-2 relative">
+            <div className="flex flex-col items-center space-y-4">
+              <img
+                src={quotes[currentQuoteIndex].image}
+                alt={quotes[currentQuoteIndex].author}
+                className="h-56 w-56 object-cover rounded-full mb-4"
+              />
+              <div className="text-center">
+                <p className="text-3xl text-white font-dancing-script">
+                  {quotes[currentQuoteIndex].text}
+                </p>
+                <p className="text-xl font-courier-prime mt-3 text-white">
+                  - {quotes[currentQuoteIndex].author}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Home;
-
