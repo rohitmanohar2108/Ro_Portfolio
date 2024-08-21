@@ -5,7 +5,6 @@ import animationDataTwo from "../Animations/Animationtwo.json";
 import animationDataThree from "../Animations/Animationthree.json";
 import { motion } from "framer-motion";
 
-
 // Certification data
 const certifications = [
     {
@@ -59,7 +58,7 @@ const Experience = () => {
   const defaultOptionsThree = {
     loop: true,
     autoplay: true,
-    animationData: animationDataThree, // Use the first animation data
+    animationData: animationDataThree,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -165,40 +164,41 @@ const Experience = () => {
       </div>
 
       {/* Certifications Section */}
-
-       <motion.div className="mt-8 mr-8">
+      <motion.div className="mt-8 mr-8">
           <Lottie options={defaultOptionsThree} height={400} width={400} />
         </motion.div>
-      <div className="mt-20">
-      <div className="border rounded-lg border-cyan-400 p-4 shadow-lg shadow-indigo-500/50">
-          <h2 className="text-3xl font-courier-prime font-normal text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
-            Certifications
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {certifications.map((cert, index) => (
-            <div
-              key={cert.id}
-              className="border rounded-lg border-cyan-400 p-4 shadow-xl shadow-indigo-500/50 bg-white text-center flex flex-col justify-between"
-              ref={addCertRefs}
-            >
-              <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                <div className="flex flex-col items-center flex-grow">
-                  <img
-                    src={cert.logoSrc}
-                    alt={`${cert.name} Logo`}
-                    className="w-24 h-auto mb-4"
-                  />
-                  <h3 className="text-2xl font-courier-prime font-bold text-blue-700">
-                    {cert.name}
-                  </h3>
-                  <h4 className="text-2xl font-courier-prime font-normal text-black">
-                    {cert.Course}
-                  </h4>
-                </div>
-              </a>
-            </div>
-          ))}
+      <div className="flex justify-center mt-20">
+        <div className="text-center">
+          <div className="border rounded-lg border-cyan-400 p-4 shadow-lg shadow-indigo-500/50">
+            <h2 ref={addToRefs} className="text-3xl font-courier-prime text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">
+              Certifications
+            </h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8 mt-8">
+            {certifications.map((cert) => (
+              <div key={cert.id} ref={addCertRefs} className="border rounded-lg border-teal-400 p-4 shadow-lg shadow-indigo-500/50 hover:scale-105 transition-transform bg-white">
+                <img
+                  src={cert.logoSrc}
+                  alt={cert.name}
+                  className="w-16 h-16 mx-auto mb-4"
+                />
+                <h3 className="text-xl font-courier-prime font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">
+                  {cert.name}
+                </h3>
+                <p className="text-base font-courier-prime text-gray-300">
+                  {cert.Course}
+                </p>
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 underline mt-2 inline-block"
+                >
+                  View Certificate
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
