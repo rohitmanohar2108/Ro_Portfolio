@@ -2,16 +2,64 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Lottie from 'react-lottie';
 import animationDataTwo from "../Animations/Animationtwo.json";
+import animationDataThree from "../Animations/Animationthree.json";
+import { motion } from "framer-motion";
+
+
+// Certification data
+const certifications = [
+    {
+      id: 1,
+      logoSrc: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+      name: "C++ Programming",
+      link: "https://udemy-certificate.s3.amazonaws.com/image/UC-18d6bb61-0afd-4f93-a950-22da50d68372.jpg?v=1685001837000",
+      Course: "Udemy",
+    },
+    {
+      id: 2,
+      logoSrc:
+        "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1732147200&v=beta&t=3VXpZyiP86LrKXtnxgm1KNkPqkxm6lndd7_x4fkXYvE",
+      name: "Problem Solving Basic",
+      link: "https://www.hackerrank.com/certificates/a409daa53e15",
+      Course: "Hackerank",
+    },
+    {
+      id: 3,
+      logoSrc:
+        "https://media.licdn.com/dms/image/v2/C4D0BAQFd9H6cxFC3wQ/company-logo_100_100/company-logo_100_100/0/1630549313166?e=1732147200&v=beta&t=lbbuC7_bSl16Rew1PlMvMKwtWRkGij7zkzxZYUNPHAo",
+      name: "Namaste React",
+      link: "https://media.licdn.com/dms/image/v2/D562DAQGBRip9wMxEyQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1720373809961?e=1724410800&v=beta&t=cs_oObs7ai9t90xKXErxQRXLWk1g4Ifujy2mLpwGvEg",
+      Course: "NamasteDev.com",
+    },
+    {
+      id: 4,
+      logoSrc: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+      name: "Web Development Bootcamp",
+      link: "https://www.udemy.com/certificate/UC-e1b5392e-1cea-4d45-9b5f-ab9f453208bd/",
+      Course: "Udemy",
+    },
+];
 
 const Experience = () => {
   const sectionRef = useRef(null);
   const textRefs = useRef([]);
+  const certRefs = useRef([]);
   textRefs.current = [];
+  certRefs.current = [];
 
   const defaultOptionsTwo = {
     loop: true,
     autoplay: true,
     animationData: animationDataTwo,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const defaultOptionsThree = {
+    loop: true,
+    autoplay: true,
+    animationData: animationDataThree, // Use the first animation data
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -23,11 +71,23 @@ const Experience = () => {
     }
   };
 
+  const addCertRefs = (el) => {
+    if (el && !certRefs.current.includes(el)) {
+      certRefs.current.push(el);
+    }
+  };
+
   useEffect(() => {
     gsap.fromTo(
       textRefs.current,
       { x: '100%', opacity: 0 },
       { x: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out' }
+    );
+
+    gsap.fromTo(
+      certRefs.current,
+      { y: '100%', opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out' }
     );
   }, []);
 
@@ -101,6 +161,44 @@ const Experience = () => {
         {/* Right Side: Lottie Animation */}
         <div className="ml-8">
           <Lottie options={defaultOptionsTwo} height={500} width={500} />
+        </div>
+      </div>
+
+      {/* Certifications Section */}
+
+       <motion.div className="mt-8 mr-8">
+          <Lottie options={defaultOptionsThree} height={400} width={400} />
+        </motion.div>
+      <div className="mt-20">
+      <div className="border rounded-lg border-cyan-400 p-4 shadow-lg shadow-indigo-500/50">
+          <h2 className="text-3xl font-courier-prime font-normal text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">
+            Certifications
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {certifications.map((cert, index) => (
+            <div
+              key={cert.id}
+              className="border rounded-lg border-cyan-400 p-4 shadow-xl shadow-indigo-500/50 bg-white text-center flex flex-col justify-between"
+              ref={addCertRefs}
+            >
+              <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                <div className="flex flex-col items-center flex-grow">
+                  <img
+                    src={cert.logoSrc}
+                    alt={`${cert.name} Logo`}
+                    className="w-24 h-auto mb-4"
+                  />
+                  <h3 className="text-2xl font-courier-prime font-bold text-blue-700">
+                    {cert.name}
+                  </h3>
+                  <h4 className="text-2xl font-courier-prime font-normal text-black">
+                    {cert.Course}
+                  </h4>
+                </div>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>
