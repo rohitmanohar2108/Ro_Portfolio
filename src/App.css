@@ -1,0 +1,12 @@
+/* Define the base style for the circles */
+.circle {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none; /* Prevent circles from interfering with clicks */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow for a more 3D effect */
+  }
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Hole Animation</title>
+    <style>
+        .rectangle {
+            fill: #3498db;
+            transition: fill 0.3s ease;
+        }
+        .hole {
+            fill: white;
+            transition: r 0.3s ease;
+        }
+        .rectangle:hover {
+            fill: #2980b9;
+        }
+        .rectangle:hover .hole {
+            r: 20;
+        }
+    </style>
+</head>
+<body>
+    <svg width="300" height="200">
+        <rect class="rectangle" x="10" y="10" width="280" height="180"/>
+        <circle class="hole" cx="100" cy="100" r="0"/>
+        <circle class="hole" cx="200" cy="100" r="0"/>
+    </svg>
+</body>
+</html>
