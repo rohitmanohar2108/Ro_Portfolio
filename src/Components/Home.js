@@ -221,6 +221,58 @@ const Home = () => {
       <p className="text-center font-courier-prime text-xl text-white mb-7">
         Made by Rohit
       </p>
+      <div className="absolute top-1/2 left-0 w-full h-full pointer-events-none">
+          <motion.div
+            className="absolute bg-red-500 rounded-full "
+            style={{ width: "100px", height: "100px" }}
+            animate={{
+              x: ["-50%", "50%"],
+              y: ["-50%", "50%"],
+              rotate: [0, 360],
+              scale: [1, 0.5, 1],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bg-blue-500 rounded-lg"
+            style={{ width: "80px", height: "80px" }}
+            animate={{
+              x: ["50%", "-50%"],
+              y: ["50%", "-50%"],
+              rotate: [0, -360],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bg-yellow-500"
+            style={{ width: "120px", height: "120px"}}
+            animate={{
+              x: ["-50%", "50%"],
+              y: ["-50%", "50%"],
+              rotate: [0, 720],
+              scale: [1, 0.8, 1],
+            }}
+            
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+            
+          />
+        </div>
     </div>
   );
 };
