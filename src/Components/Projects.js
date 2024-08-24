@@ -79,7 +79,7 @@ const Projects = () => {
           </motion.div>
           {/* Description Below Experience */}
           <motion.p
-            className="text-gray-300 mb-8"
+            className="text-gray-300 mb-8 text-2xl font-courier-prime"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -107,22 +107,22 @@ const Projects = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover" // Adjust height if needed
+              className="w-full h-48 object-cover font-courier-prime" // Adjust height if needed
             />
             <div className="p-4">
-              <h3 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500 font-bold mb-2">
+              <h3 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-400 font-bold mb-2 font-courier-prime">
                 {project.title}
               </h3>
-              <p className="text-gray-300 mb-4 text-base">
+              <p className="text-gray-300 mb-4 text-base font-courier-prime">
                 {project.description}
               </p>
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline flex items-center"
+                className="text-blue-400 flex items-center"
               >
-                <FaGithub className="text-2xl mr-2" />
+                <FaGithub className="text-2xl mr-2 font-courier-prime" />
                 View on GitHub
               </a>
             </div>

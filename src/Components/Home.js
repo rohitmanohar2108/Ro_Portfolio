@@ -5,10 +5,6 @@ import Lottie from "lottie-react";
 import {
   FaArrowLeft,
   FaArrowRight,
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaTwitter,
 } from "react-icons/fa"; // Import React Icons
 
 const quotes = [
@@ -207,38 +203,7 @@ const Home = () => {
             tech community.
           </p>
           <div className="flex mt-4 space-x-4 z-20 relative">
-            <a
-              href="https://github.com/rohitmanohar2108"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaGithub className="text-3xl hover:text-teal-400 transition-colors" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rohit-manohar-80b949207/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaLinkedin className="text-3xl hover:text-teal-400 transition-colors" />
-            </a>
-            <a
-              href="https://www.instagram.com/rohitmanohar2108/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaInstagram className="text-3xl hover:text-teal-400 transition-colors" />
-            </a>
-            <a
-              href="https://twitter.com/imrohit372"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white"
-            >
-              <FaTwitter className="text-3xl hover:text-teal-400 transition-colors" />
-            </a>
+            
             <a
               href="https://drive.google.com/file/d/1Rdddm_h-MFgcIkppo7uDtpQ-V-4rFZN2/view?usp=sharing"
               target="_blank"
