@@ -218,14 +218,11 @@ const Home = () => {
       </p>
       <div className="absolute top-3/4 left-24  w-full h-full pointer-events-none ">
         <motion.div
-          className="absolute bg-red-500 rounded-full bg-opacity-10"
-          style={{ width: "100px", height: "100px" }}
+          className="absolute bg-orange-500 rounded-full bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
           animate={{
-            x: ["-50%", "50%"],
-            y: ["-50%", "50%"],
-            z: -1,
-            rotate: [0, 360],
-            scale: [1, 0.5, 1],
+            rotateY: [0, 180, 360],
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 4,
@@ -234,13 +231,13 @@ const Home = () => {
             ease: "easeInOut",
           }}
         />
+
         <motion.div
           className="absolute bg-blue-500 rounded-lg bg-opacity-10"
           style={{ width: "80px", height: "80px" }}
           animate={{
             x: ["50%", "-50%"],
             y: ["50%", "-50%"],
-            z: -1,
             rotate: [0, -360],
             scale: [1, 1.5, 1],
           }}
@@ -248,37 +245,34 @@ const Home = () => {
             duration: 5,
             repeat: Infinity,
             repeatType: "loop",
-            ease: "easeInOut",
+            ease: [0.5, 0.05, 0.25, 1], // Elastic effect
           }}
         />
+
         <motion.div
-          className="absolute bg-yellow-500 bg-opacity-10"
-          style={{ width: "100px", height: "100px" }}
+          className="absolute bg-green-500 rounded-lg bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
           animate={{
             x: ["-50%", "50%"],
             y: ["-50%", "50%"],
-            z: -1,
-            rotate: [0, 720],
-            scale: [1, 0.8, 1],
+            rotate: [0, 15, -15, 0],
+            scale: [1, 1.1, 1],
           }}
           transition={{
-            duration: 6,
+            duration: 3,
             repeat: Infinity,
             repeatType: "loop",
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
       </div>
       <div className="absolute top-0 left-96  w-full h-full pointer-events-none ">
         <motion.div
-          className="absolute bg-red-500 rounded-full bg-opacity-10 "
-          style={{ width: "100px", height: "100px" }}
+          className="absolute bg-orange-500 rounded-full bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
           animate={{
-            x: ["-50%", "50%"],
-            y: ["-50%", "50%"],
-            z: -1,
-            rotate: [0, -360],
-            scale: [1, 0.5, 1],
+            rotateY: [0, 180, 360],
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 4,
@@ -287,21 +281,21 @@ const Home = () => {
             ease: "easeInOut",
           }}
         />
+
         <motion.div
-          className="absolute bg-blue-500 rounded-lg bg-opacity-10"
-          style={{ width: "80px", height: "80px" }}
+          className="absolute bg-green-500 rounded-lg bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
           animate={{
-            x: ["50%", "-50%"],
-            y: ["50%", "-50%"],
-            z: -1,
-            rotate: [0, 360],
-            scale: [1, 1.5, 1],
+            x: ["-50%", "50%"],
+            y: ["-50%", "50%"],
+            rotate: [0, 15, -15, 0],
+            scale: [1, 1.1, 1],
           }}
           transition={{
-            duration: 5,
+            duration: 3,
             repeat: Infinity,
             repeatType: "loop",
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
         <motion.div
@@ -341,7 +335,7 @@ const Home = () => {
           }}
         />
         <motion.div
-          className="absolute bg-blue-500 rounded-lg bg-opacity-10"
+          className="absolute bg-green-300  bg-opacity-10  rounded-full"
           style={{ width: "80px", height: "80px" }}
           animate={{
             x: ["50%", "-50%"],
@@ -358,33 +352,26 @@ const Home = () => {
           }}
         />
         <motion.div
-          className="absolute bg-yellow-400 bg-opacity-10"
-          style={{ width: "120px", height: "120px" }}
+          className="absolute bg-orange-500 bg-opacity-10"
+          style={{ width: "80px", height: "80px" }}
           animate={{
-            x: ["-50%", "50%"],
-            y: ["-50%", "50%"],
-            z: -1,
-            rotate: [0, 720],
-            scale: [1, 0.8, 1],
+            opacity: [0, 1, 0],
           }}
           transition={{
-            duration: 6,
+            duration: 3,
             repeat: Infinity,
             repeatType: "loop",
             ease: "easeInOut",
           }}
         />
       </div>
-      <div className="absolute top-0 left-3/4 ml-28 w-full h-full pointer-events-none ">
+      <div className="absolute top-0 left-3/4 ml-44 mt-14 w-full h-full pointer-events-none ">
         <motion.div
-          className="absolute bg-red-500 rounded-lg bg-opacity-10 "
-          style={{ width: "100px", height: "100px" }}
+          className="absolute bg-orange-500 rounded-full bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
           animate={{
-            x: ["-50%", "50%"],
-            y: ["-50%", "50%"],
-            z: -1,
-            rotate: [0, -360],
-            scale: [1, 0.5, 1],
+            rotateY: [0, 180, 360],
+            scale: [1, 1.2, 1],
           }}
           transition={{
             duration: 4,
@@ -393,8 +380,9 @@ const Home = () => {
             ease: "easeInOut",
           }}
         />
+
         <motion.div
-          className="absolute bg-blue-500 rounded-lg bg-opacity-10"
+          className="absolute bg-green-500 rounded-lg bg-opacity-10"
           style={{ width: "80px", height: "80px" }}
           animate={{
             x: ["50%", "-50%"],
@@ -411,17 +399,62 @@ const Home = () => {
           }}
         />
         <motion.div
-          className="absolute bg-yellow-400 bg-opacity-10"
-          style={{ width: "120px", height: "120px" }}
+          className="absolute bg-teal-500 rounded-md bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
           animate={{
-            x: ["-50%", "50%"],
-            y: ["-50%", "50%"],
-            z: -1,
-            rotate: [0, 720],
-            scale: [1, 0.8, 1],
+            x: ["-50%", "50%", "-50%"],
+            y: ["-50%", "50%", "-50%"],
           }}
           transition={{
-            duration: 6,
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+      <div className="absolute top-2/3 left-3/4 ml-28 mt-32 w-full h-full pointer-events-none ">
+        <motion.div
+          className="absolute bg-orange-500 rounded-full bg-opacity-15"
+          style={{ width: "90px", height: "90px" }}
+          animate={{
+            rotateY: [0, 180, 360],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        />
+
+        <motion.div
+          className="absolute bg-green-500 rounded-lg bg-opacity-10"
+          style={{ width: "80px", height: "80px" }}
+          animate={{
+            x: ["50%", "-50%"],
+            y: ["50%", "-50%"],
+            z: -1,
+            rotate: [0, 360],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bg-teal-500 rounded-md bg-opacity-10"
+          style={{ width: "90px", height: "90px" }}
+          animate={{
+            x: ["-50%", "50%", "-50%"],
+            y: ["-50%", "50%", "-50%"],
+          }}
+          transition={{
+            duration: 4,
             repeat: Infinity,
             repeatType: "loop",
             ease: "easeInOut",
