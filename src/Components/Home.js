@@ -149,7 +149,7 @@ const Home = () => {
       </div>
 
       {/* Bottom: Quotes Section */}
-      <div className="mt-16 bg-teal-400 flex items-center">
+      <div className="mt-28 bg-teal-400 flex items-center ">
         <div className="w-full mx-auto relative">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-4 ml-5 rounded-full cursor-pointer hover:bg-gray-800 z-10">
             <FaArrowLeft onClick={handlePrevQuote} />

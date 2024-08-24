@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-black text-white p-4 fixed w-full top-0 left-0 z-50">
       <nav className="container mx-auto flex justify-between">
-        <div className="text-4xl mt-3 font-extrabold font-great-vibes">Rohit Manohar</div>
+        <div className="text-4xl mt-3 font-extrabold font-great-vibes cursor-pointer hover:text-teal-500 transition-colors duration-300">Rohit Manohar</div>
         <div className="space-x-4 flex">
           <Link to="/" className="relative group">
             <div className="px-8 py-4 relative z-10 group-hover:text-black">
