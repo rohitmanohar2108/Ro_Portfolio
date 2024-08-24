@@ -221,7 +221,7 @@ const Home = () => {
       <p className="text-center font-courier-prime text-xl text-white mb-7">
         Made by Rohit
       </p>
-      <div className="absolute top-1/2 left-0 w-full h-full pointer-events-none">
+      <div className="absolute top-3/4 left-24  w-full h-full pointer-events-none ">
           <motion.div
             className="absolute bg-red-500 rounded-full "
             style={{ width: "100px", height: "100px" }}
@@ -256,23 +256,22 @@ const Home = () => {
           />
           <motion.div
             className="absolute bg-yellow-500"
-            style={{ width: "120px", height: "120px"}}
+            style={{ width: "120px", height: "120px" }}
             animate={{
               x: ["-50%", "50%"],
               y: ["-50%", "50%"],
               rotate: [0, 720],
               scale: [1, 0.8, 1],
             }}
-            
             transition={{
               duration: 6,
               repeat: Infinity,
               repeatType: "loop",
               ease: "easeInOut",
             }}
-            
           />
         </div>
+
     </div>
   );
 };
