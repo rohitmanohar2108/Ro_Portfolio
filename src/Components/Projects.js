@@ -1,8 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import animationDataFour from "../Animations/Animationfour.json"; // Adjust path if necessary
 import Lottie from "react-lottie";
+import gsap from "gsap";
 
 const projects = [
   {
@@ -49,60 +49,61 @@ const Projects = () => {
     },
   };
 
+  const textRefs = useRef([]);
+
+  const addToRefs = (el) => {
+    if (el && !textRefs.current.includes(el)) {
+      textRefs.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    gsap.fromTo(
+      textRefs.current,
+      { x: "100%", opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" }
+    );
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="flex flex-col lg:flex-row">
         {/* Lottie Animation */}
         <div className="flex-1 lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
-          <motion.div
-            className="flex justify-center"
-            whileHover={{ scale: 1.1 }}
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
-          >
+          <div className="flex justify-center">
             <Lottie options={defaultOptionsFour} height={600} width={600} />
-          </motion.div>
+          </div>
         </div>
 
         {/* Experience Section */}
         <div className="flex-1 lg:w-1/2">
-          <motion.div
-            className="border rounded-lg border-teal-400 p-4 shadow-lg shadow-indigo-500/50 mb-8"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
-          >
-            <h2 className="text-3xl font-courier-prime text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 experience-heading">
+          <div className="border rounded-lg border-teal-400 p-4 shadow-lg shadow-indigo-500/50 mb-8">
+            <h2
+              ref={addToRefs}
+              className="text-3xl font-courier-prime text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 experience-heading"
+            >
               Projects
             </h2>
-          </motion.div>
+          </div>
           {/* Description Below Experience */}
-          <motion.p
+          <p
+            ref={addToRefs}
             className="text-gray-300 mb-8 text-2xl font-courier-prime"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
           >
             Here are some of the projects I have worked on. Each project showcases different skills and technologies I have used. Feel free to explore them and see the results of my work.
-          </motion.p>
+          </p>
         </div>
       </div>
 
       {/* Project Cards */}
-      <motion.div
+      <div
+        ref={addToRefs}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, staggerChildren: 0.2 }}
       >
         {projects.map((project, index) => (
-          <motion.div
+          <div
             key={index}
             className="bg-gray-800 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/50 transition-transform duration-300 hover:scale-105"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
           >
             <img
               src={project.image}
@@ -126,11 +127,12 @@ const Projects = () => {
                 View on GitHub
               </a>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
 
 export default Projects;
+
