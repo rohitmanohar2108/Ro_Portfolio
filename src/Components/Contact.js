@@ -23,11 +23,10 @@ const Contact = () => {
 
       {/* Content on the Right */}
       <div className="flex-1 lg:w-1/2 max-w-lg lg:max-w-none">
-        <div className="p-6 lg:p-8 shadow-lg shadow-indigo-500/50 mb-96">
+        <div className="p-6 lg:p-8 shadow-lg shadow-indigo-500/50 mb-12">
           <div className="border rounded-lg border-teal-400 p-4 shadow-lg shadow-indigo-500/50">
             <div className="w-64 mx-auto">
               <h2
-              
                 className="text-3xl font-courier-prime text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 experience-heading text-center"
               >
                 Contact Me
@@ -36,11 +35,9 @@ const Contact = () => {
           </div>
 
           <p className="text-gray-300 mt-4 mb-6 text-xl font-courier-prime ">
-          
-          
-          I am available on almost every social media. You can message me, I will reply within 24 hours :)
+            I am available on almost every social media. You can message me, I will reply within 24 hours :)
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 mb-6">
             <a
               href="https://github.com/rohitmanohar2108"
               target="_blank"
@@ -73,6 +70,24 @@ const Contact = () => {
             >
               <FaTwitter className="text-3xl hover:text-teal-400 transition-colors" />
             </a>
+          </div>
+
+          {/* Drop a Mail Button */}
+          <div className="mt-8 text-center">
+            <a
+              href="mailto:rohitmanohar2108@gmail.com"
+              className="shadow-md shadow-white text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500 font-normal font-courier-prime text-xl py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors transition-transform transform hover:scale-105"
+            >
+              Drop a Mail
+            </a>
+          </div>
+
+          {/* Address and Phone Number */}
+          <div className="mt-8 text-center">
+            <div className="text-gray-300 text-xl font-courier-prime mb-4">
+              <p>Address: National Institute of Technology Karnataka (NITK)</p>
+              <p>Phone: +91-123-456-xxxx</p>
+            </div>
           </div>
         </div>
       </div>
