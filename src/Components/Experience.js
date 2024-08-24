@@ -195,7 +195,7 @@ const Experience = () => {
 
       {/* Certifications Section */}
       <motion.div className="mt-8 mr-8">
-        <Lottie options={defaultOptionsThree} height={700} width={700} />
+        <Lottie options={defaultOptionsThree} height={500} width={500} />
       </motion.div>
       <div className="flex justify-center mt">
         <div className="text-center">

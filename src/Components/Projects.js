@@ -88,7 +88,7 @@ const Projects = () => {
           {/* Description Below Experience */}
           <p
             ref={addToRefs}
-            className="text-gray-300 mb-8 text-2xl font-courier-prime"
+            className="text-gray-300 mb-8 text-xl font-courier-prime"
           >
             Here are some of the projects I have worked on. Each project showcases different skills and technologies I have used. Feel free to explore them and see the results of my work.
           </p>
@@ -130,6 +130,9 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <p className="text-center font-courier-prime text-xl text-white mt-10">
+        Made by Rohit
+      </p>
     </div>
   );
 };

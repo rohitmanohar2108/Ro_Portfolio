@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import animationData from "../Animations/Animation.json";
+import TechStackBanner from "./TechStackBanner";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import {
@@ -214,7 +215,12 @@ const Home = () => {
             </a>
           </div>
         </div>
+        
       </div>
+      <TechStackBanner/>
+      <p className="text-center font-courier-prime text-xl text-white mb-7">
+        Made by Rohit
+      </p>
     </div>
   );
 };
