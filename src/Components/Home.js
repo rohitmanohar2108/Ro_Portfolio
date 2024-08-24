@@ -216,7 +216,7 @@ const Home = () => {
       <p className="text-center font-courier-prime text-xl text-white mb-7">
         Made by Rohit
       </p>
-      <div className="absolute top-3/4 left-24  w-full h-full pointer-events-none ">
+      <div className="absolute  z-auto top-3/4 left-24  w-full h-full pointer-events-none ">
         <motion.div
           className="absolute bg-orange-500 rounded-full bg-opacity-10"
           style={{ width: "90px", height: "90px" }}
@@ -266,7 +266,7 @@ const Home = () => {
           }}
         />
       </div>
-      <div className="absolute top-0 left-96  w-full h-full pointer-events-none ">
+      <div className="absolute z-auto top-0 left-96  w-full h-full pointer-events-none ">
         <motion.div
           className="absolute bg-orange-500 rounded-full bg-opacity-10"
           style={{ width: "90px", height: "90px" }}
@@ -316,7 +316,7 @@ const Home = () => {
           }}
         />
       </div>
-      <div className="absolute top-1/2 left-1/2 w-full h-full pointer-events-none ">
+      <div className="absolute z-auto top-1/2 left-1/2 w-full h-full pointer-events-none ">
         <motion.div
           className="absolute bg-red-500 rounded-full bg-opacity-10 "
           style={{ width: "100px", height: "100px" }}
@@ -365,7 +365,7 @@ const Home = () => {
           }}
         />
       </div>
-      <div className="absolute top-0 left-3/4 ml-44 mt-14 w-full h-full pointer-events-none ">
+      <div className="absolute z-auto top-0 left-3/4 ml-44 mt-14 w-full h-full pointer-events-none ">
         <motion.div
           className="absolute bg-orange-500 rounded-full bg-opacity-10"
           style={{ width: "90px", height: "90px" }}
@@ -413,7 +413,7 @@ const Home = () => {
           }}
         />
       </div>
-      <div className="absolute top-2/3 left-3/4 ml-28 mt-32 w-full h-full pointer-events-none ">
+      <div className="absolute z-auto top-2/3 left-3/4 ml-28 mt-32 w-full h-full pointer-events-none ">
         <motion.div
           className="absolute bg-orange-500 rounded-full bg-opacity-15"
           style={{ width: "90px", height: "90px" }}
