@@ -12,7 +12,7 @@ function App() {
       <Header />
       <div className="pt-16"> {/* Padding to avoid overlap with the fixed header */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
