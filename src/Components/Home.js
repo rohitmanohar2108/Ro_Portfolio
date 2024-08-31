@@ -101,7 +101,7 @@ const Home = () => {
             whileHover={{
               y: -10,
               opacity: 0.8,
-              color: "#38B2AC",
+              color: "#1E90FF",
               textShadow: "0px 4px 8px rgba(56, 179, 172, 0.8)",
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
