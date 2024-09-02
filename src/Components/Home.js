@@ -202,7 +202,7 @@ const Home = () => {
           </p>
           <div className="flex mt-4 space-x-4 z-20 relative">
             <a
-              href="https://drive.google.com/file/d/1Rdddm_h-MFgcIkppo7uDtpQ-V-4rFZN2/view?usp=sharing"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="shadow-md shadow-white  text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-500 font-normal font-courier-prime text-xl py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors transition-transform transform hover:scale-105"
